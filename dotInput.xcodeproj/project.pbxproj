@@ -12,7 +12,33 @@
 		5463757C217EC1180004612E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5463757A217EC1180004612E /* Main.storyboard */; };
 		5463757E217EC1180004612E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5463757D217EC1180004612E /* Assets.xcassets */; };
 		54637581217EC1180004612E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5463757F217EC1180004612E /* LaunchScreen.storyboard */; };
+		5463758F217EC1E80004612E /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5463758E217EC1E80004612E /* KeyboardViewController.swift */; };
+		54637593217EC1E80004612E /* dotInputKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5463758C217EC1E80004612E /* dotInputKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		54637591217EC1E80004612E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5463756B217EC1180004612E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5463758B217EC1E80004612E;
+			remoteInfo = dotInputKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		54637597217EC1E80004612E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				54637593217EC1E80004612E /* dotInputKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		54637573217EC1180004612E /* dotInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dotInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +48,20 @@
 		5463757D217EC1180004612E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54637580217EC1180004612E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54637582217EC1180004612E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5463758C217EC1E80004612E /* dotInputKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = dotInputKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5463758E217EC1E80004612E /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		54637590217EC1E80004612E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		54637570217EC1180004612E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54637589217EC1E80004612E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				54637575217EC1180004612E /* dotInput */,
+				5463758D217EC1E80004612E /* dotInputKeyboard */,
 				54637574217EC1180004612E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				54637573217EC1180004612E /* dotInput.app */,
+				5463758C217EC1E80004612E /* dotInputKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +102,15 @@
 			path = dotInput;
 			sourceTree = "<group>";
 		};
+		5463758D217EC1E80004612E /* dotInputKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5463758E217EC1E80004612E /* KeyboardViewController.swift */,
+				54637590217EC1E80004612E /* Info.plist */,
+			);
+			path = dotInputKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +121,34 @@
 				5463756F217EC1180004612E /* Sources */,
 				54637570217EC1180004612E /* Frameworks */,
 				54637571217EC1180004612E /* Resources */,
+				54637597217EC1E80004612E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				54637592217EC1E80004612E /* PBXTargetDependency */,
 			);
 			name = dotInput;
 			productName = dotInput;
 			productReference = 54637573217EC1180004612E /* dotInput.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5463758B217EC1E80004612E /* dotInputKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 54637594217EC1E80004612E /* Build configuration list for PBXNativeTarget "dotInputKeyboard" */;
+			buildPhases = (
+				54637588217EC1E80004612E /* Sources */,
+				54637589217EC1E80004612E /* Frameworks */,
+				5463758A217EC1E80004612E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dotInputKeyboard;
+			productName = dotInputKeyboard;
+			productReference = 5463758C217EC1E80004612E /* dotInputKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +161,9 @@
 				ORGANIZATIONNAME = xiezongyuan;
 				TargetAttributes = {
 					54637572217EC1180004612E = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					5463758B217EC1E80004612E = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -113,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				54637572217EC1180004612E /* dotInput */,
+				5463758B217EC1E80004612E /* dotInputKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +198,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5463758A217EC1E80004612E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -140,7 +217,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		54637588217EC1E80004612E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5463758F217EC1E80004612E /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54637592217EC1E80004612E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5463758B217EC1E80004612E /* dotInputKeyboard */;
+			targetProxy = 54637591217EC1E80004612E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5463757A217EC1180004612E /* Main.storyboard */ = {
@@ -213,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -268,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -281,9 +374,12 @@
 		54637586217EC1180004612E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B63XN6ZN2;
 				INFOPLIST_FILE = dotInput/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,15 +394,56 @@
 		54637587217EC1180004612E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B63XN6ZN2;
 				INFOPLIST_FILE = dotInput/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = XZY.dotInput;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		54637595217EC1E80004612E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B63XN6ZN2;
+				INFOPLIST_FILE = dotInputKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = XZY.dotInput.dotInputKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		54637596217EC1E80004612E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8B63XN6ZN2;
+				INFOPLIST_FILE = dotInputKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = XZY.dotInput.dotInputKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -329,6 +466,15 @@
 			buildConfigurations = (
 				54637586217EC1180004612E /* Debug */,
 				54637587217EC1180004612E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		54637594217EC1E80004612E /* Build configuration list for PBXNativeTarget "dotInputKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54637595217EC1E80004612E /* Debug */,
+				54637596217EC1E80004612E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
